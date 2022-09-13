@@ -1,0 +1,5 @@
+<launch>
+  <node name="static_tf0" pkg="tf" type="static_transform_publisher" args="2 0 0 0 0 0 /map /base_link 100" />
+  <rosparam file="$(find simple_layer)/params/params.yaml" command="load"/>
+  <node name="grid_layer_test" pkg="simple_layer" type="simple_layer_node" />
+</launch>
